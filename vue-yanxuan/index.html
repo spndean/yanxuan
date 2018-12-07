@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>vue-yanxuan</title>
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_944232_lnbg5dgy09.css">
+    <style>
+      html,body {
+        overflow-x:hidden;
+      }
+    </style>
+    <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+    <script>
+      if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body);
+        }, false);
+      }
+      if(!window.Promise) {
+        document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
+      }
+
+      //适配
+      !(function(){
+        //屏幕宽
+        var width = document.documentElement.clientWidth;
+        //创建style标签
+        var styleNode = document.createElement('style');
+        //设置html 字体大小
+        styleNode.innerHTML = 'html{font-size: '+ width/16 +'px !important;}';
+        //style标签 放到 head标签中
+        document.head.appendChild(styleNode);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
